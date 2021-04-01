@@ -139,6 +139,12 @@ div > div > section{
 :is(.a, .b, .c) > section {
     width: 60%;
 }
+
+.a > div{
+    width: 50%
+}
+
+
 /* #Top Boxes */
 
 
@@ -241,6 +247,9 @@ div > div > section{
     #navbar{
         flex-wrap: wrap;
     }
+}
+
+@media only screen and (max-width: 768px){
     .layout > div{
         flex-direction: column;
     }
@@ -280,31 +289,6 @@ div > div > section{
         'i'
         'j'
         ;
-    }
-
-}
-
-
-@media only screen and (max-width: 640px){
-    #navbar{
-        flex-direction: column;
-    }
-    .layout{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "a"
-        'b'
-        'c'
-        'd'
-        'e'
-        'f'
-        'g'
-        'h'
-        'i'
-        'j'
-        ;
-
     }
 
 }
