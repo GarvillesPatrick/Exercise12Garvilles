@@ -1,0 +1,311 @@
+/* Universal */
+
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #e1e1e1;
+}
+
+p, h1, h2, h3{
+    padding: 0px;
+    margin: 0px;
+}
+
+h3, h2, h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    color: #5e5e5e;
+}
+
+a{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 30px;
+}
+
+
+p{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 15px;
+}
+
+
+/* #Universal */
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    background-color: #3C4B56;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar > div{
+    box-sizing: content-box;
+    text-align: center;
+
+}
+
+#navbar > div > a{
+    text-decoration: none;
+    color: #ccc;
+    display: block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+#navbar > div > a:hover{
+    background-color: #354047;
+    color: white;
+}
+
+#navbar > div > a:active{
+    background-color: #2f373b;
+    color: #E1665D;
+}
+
+#navbar > div > a:focus{
+    color: #E1665D;
+}
+
+/* #Navigation Bar */
+
+
+
+/* Layout Shape */
+#title{
+    text-align: center;
+}
+hr{
+    width: 40%;
+}
+.layout{
+    display: grid;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+    grid-template-areas: 
+    " a a a a a a b b b b b b "
+    " c c c c c c c c c c c c " 
+    " d d d d e e e e f f f f "
+    " g g g h h h i i i j j j"
+    ;
+}
+
+.layout > div{
+    display: flex;
+    border-radius: 10px;
+    background-color: #fbfafb;
+    box-shadow: 1px 1px gray;
+
+}
+div > div > section{
+    padding: 0px 10px 10px 10px;
+}
+
+
+.links{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 10px;
+}
+
+.link_a{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 10px;
+}
+
+/* #Layout Shape */
+
+
+
+/* Top Boxes */
+:is(.a, .b, .c){
+    flex-direction: row;
+    padding: 10px;
+}
+
+:is(.a, .b, .c) > div > img {
+    width: 100%;
+    height: 100%;
+
+}
+
+:is(.a, .b, .c) > div {
+    width: 40%;
+}
+
+:is(.a, .b, .c) > section {
+    width: 60%;
+}
+/* #Top Boxes */
+
+
+
+/* Middle Boxes */
+.d, .e, .f, .g, .h, .i, .j{
+    flex-direction: column;
+}
+
+
+:is(.d, .e, .f) > div{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+}
+
+:is(.d, .e, .f) > div > img{
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+:is(.d, .e, .f) > section{
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    height: 50%;
+}
+/* #Middle Boxes */
+
+
+/* Bottom Boxes */
+:is(.g, .h ,.i, .j) > div{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+}
+
+:is(.g, .h ,.i, .j) > div > img{
+    width: 100%;
+    height: 100%;
+}
+
+:is(.g, .h ,.i, .j) > section{
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+/* #Bottom Boxes */
+
+
+
+/* Grid Area Declaration */
+.a{
+    grid-area: a;
+}
+
+.b{
+    grid-area: b;
+}
+
+.c{
+    grid-area: c;
+}
+
+.d{
+    grid-area: d;
+}
+
+.e{
+    grid-area: e;
+}
+
+.f{
+    grid-area: f;
+}
+
+.g{
+    grid-area: g;
+}
+
+.h{
+    grid-area: h;
+}
+
+.i{
+    grid-area: i;
+}
+
+.j{
+    grid-area: j;
+}
+/* #Grid Area Declaration */
+
+
+/* Responsive */
+@media only screen and (max-width: 1007px){
+    #navbar{
+        flex-wrap: wrap;
+    }
+    .layout > div{
+        flex-direction: column;
+    }
+
+    .layout > div > div{
+        box-sizing: border-box;
+        width: 100%;
+
+    }
+
+    .layout > div > div > img{
+        width: 100%;
+    }
+
+
+    .layout > div > section{
+        width: 100%;
+    }
+
+    .layout > div > section > h3{
+        text-align: center;
+    }
+
+    .layout{
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        'g'
+        'h'
+        'i'
+        'j'
+        ;
+    }
+
+}
+
+
+@media only screen and (max-width: 640px){
+    #navbar{
+        flex-direction: column;
+    }
+    .layout{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        'g'
+        'h'
+        'i'
+        'j'
+        ;
+
+    }
+
+}
+/* #Responsive */
