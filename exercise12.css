@@ -141,7 +141,11 @@ div > div > section{
 }
 
 .a > div{
-    width: 50%
+    width: 60%;
+}
+
+.a > section{
+    width: 40%;
 }
 
 
